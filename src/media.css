@@ -317,6 +317,7 @@
     }
 
     #wallet_arrow_d {
+        display: none;
         rotate: calc(90deg);
         transition: transform .5s ease-in-out;
     }
@@ -641,6 +642,7 @@
     }
 
     #wallet_arrow_m {
+        display: none;
         rotate: calc(90deg);
         transition: transform .5s ease-in-out;
     }

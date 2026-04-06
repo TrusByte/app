@@ -8,6 +8,19 @@ let walletConnection = false;
 let tbyt;
 let usdt;
 let pol;
+let wpd = document.getElementById("wallet_place_d")
+let wpm = document.getElementById("wallet_place_m")
+let wad = document.getElementById("wallet_arrow_d")
+let wam = document.getElementById("wallet_arrow_m")
+let lom = document.getElementById("loader_m")
+let lod = document.getElementById("loader_d")
+
+wad.style.display = "none"
+wam.style.display = "none"
+lod.style.display = "flex"
+lom.style.display = "flex"
+
+
 function isMobile() {
     // return /Android|iPhone/i.test(navigator.userAgent);
     return window.innerWidth < 900;
@@ -30,11 +43,6 @@ async function loadABI() {
 }
 
 async function connectClicked(showConnect) {
-    let wpd = document.getElementById("wallet_place_d")
-    let wpm = document.getElementById("wallet_place_m")
-    let wad = document.getElementById("wallet_arrow_d")
-    let wam = document.getElementById("wallet_arrow_m")
-
     if (showConnect) {
         if (isMobile()) {
             wpm.setAttribute("onclick", "connectClicked(false)")
@@ -139,6 +147,10 @@ window.onload = async function () {
 
 
 async function connectWallet(walletName) {
+    wad.style.display = "none"
+    wam.style.display = "none"
+    lod.style.display = "flex"
+    lom.style.display = "flex"
     const dappUrl = window.location.href;
     const encodedUrl = encodeURIComponent(dappUrl);
     // Mobile deep links
@@ -193,6 +205,10 @@ async function connectWallet(walletName) {
 }
 
 async function onWalletConnected(account, index) {
+    wad.style.display = "flex"
+    wam.style.display = "flex"
+    lod.style.display = "none"
+    lom.style.display = "none"
     document.getElementById("tbyt_balance").innerText = tbyt + " TBYT";
     document.getElementById("pol_balance").innerText = pol + " POL";
     document.getElementById("usdt_balance").innerText = usdt + " USDT";
@@ -210,6 +226,10 @@ async function onWalletConnected(account, index) {
 }
 
 function showConnectButton() {
+    wad.style.display = "flex"
+    wam.style.display = "flex"
+    lod.style.display = "none"
+    lom.style.display = "none"
     document.getElementById("walletAddress_d").innerText = "Connect Wallet";
     document.getElementById("walletAddress_m").innerText = "Connect";
 }
