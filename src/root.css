@@ -171,3 +171,12 @@ a {
         transform: rotate(360deg);
     }
 }
+
+.wallet_connect_disconnect {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.wallet_connect_disconnect:active {
+    background: linear-gradient(319deg, #00bae4 -1.9%, #b0fff6 17.34%, #00b2da 87.36%);
+}

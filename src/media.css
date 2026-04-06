@@ -630,10 +630,6 @@
 
     }
 
-    #wallet_overlay_m {
-        /* min-width: 250px; */
-    }
-
     .wallet_overlay .heading {
         font-family: "DM Sans Bold";
         font-size: calc(var(--1)*16);
@@ -749,12 +745,12 @@
     }
 
     .balance_section .bal_heading {
-        padding: calc(var(--1) *10);
+        padding: calc(var(--1) *8);
         padding-left: calc(var(--1)*1);
     }
 
     .balance_section .bal_heading span {
-        font-size: calc(var(--1) * 17);
+        font-size: calc(var(--1) * 19);
         font-weight: bolder;
     }
 
@@ -762,9 +758,9 @@
         display: flex;
         flex-direction: row;
         padding: 10px;
-        margin-top: 10px;
+        margin-top: 15px;
         border-radius: calc(var(--1) * 16);
-        border: .1px solid #b3fff9;
+        border: .1px solid #00f2ff;
     }
 
     .bal .logo {
@@ -785,9 +781,11 @@
         justify-content: center;
         margin-right: 10px;
         width: 100%;
+
     }
 
     .bal .balances .name_qty {
+
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -802,6 +800,7 @@
     }
 
     .bal .balances .qty {
+        font-weight: bolder;
         align-self: flex-end;
     }
 

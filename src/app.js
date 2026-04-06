@@ -209,9 +209,9 @@ async function onWalletConnected(account, index) {
     wam.style.display = "flex"
     lod.style.display = "none"
     lom.style.display = "none"
-    document.getElementById("tbyt_balance").innerText = tbyt + " TBYT";
-    document.getElementById("pol_balance").innerText = pol + " POL";
-    document.getElementById("usdt_balance").innerText = usdt + " USDT";
+    document.getElementById("tbyt_balance").innerText = tbyt;
+    document.getElementById("pol_balance").innerText = pol;
+    document.getElementById("usdt_balance").innerText = usdt;
     if (isMobile()) {
         document.getElementById("wallet_place_m").setAttribute("onclick", "showWallets()");
         document.getElementById("wallet_arrow_m").style.display = "flex";
@@ -268,9 +268,9 @@ function disconnectWallet() {
     walletConnection = false;
     localStorage.removeItem("walletConnected");
     showConnectButton()
-    document.getElementById("tbyt_balance").innerText = "0.00 TBYT";
-    document.getElementById("pol_balance").innerText = "0.00 POL";
-    document.getElementById("usdt_balance").innerText = "0.00 USDT";
+    document.getElementById("tbyt_balance").innerText = "0.00";
+    document.getElementById("pol_balance").innerText = "0.00";
+    document.getElementById("usdt_balance").innerText = "0.00";
     document.getElementById("wallet_overlay_d").style.display = "none";
     document.getElementById("wallet_overlay_m").style.display = "none";
     document.getElementById("wallet_list_m").style.display = "flex"
